@@ -1,5 +1,8 @@
 const fs = require("fs/promises");
-const contactsPath = "";
+const path = require("path");
+const { nanoid } = require("nanoid");
+
+const contactsPath = path.join(__dirname, "contacts.json");
 
 function listContacts() {
   // ...твій код. Повертає масив контактів.
