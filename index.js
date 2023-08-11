@@ -1,5 +1,5 @@
-// const yargs = require("yargs");
-// const { hideBin } = require("yargs/helpers");
+const yargs = require("yargs");
+const { hideBin } = require("yargs/helpers");
 
 const contacts = require("./contacts");
 
@@ -26,13 +26,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
   }
 };
 
-// invokeAction({ action: "list" });
-// invokeAction({ action: "get", id: "1DEXoP8AuCGYc1YgoQ6hw" });
-// invokeAction({ action: "add", name: "name", email: "email", phone: "phone" });
-// invokeAction({ action: "remove", id: "OXXipXxa3wrOQ2ONZm0TV" });
-// invokeAction({ action: "get", id: "OXXipXxa3wrOQ2ONZm0TV" });
-
-// const arr = hideBin(process.argv);
-// const { argv } = yargs(arr);
-// console.log(argv);
-// invokeAction(argv);
+const arr = hideBin(process.argv);
+const { argv } = yargs(arr);
+console.log(argv);
+invokeAction(argv);
